@@ -1,5 +1,7 @@
-package com.pnaditya.jersey.JerseyTemplate;
+package com.pnaditya.jersey;
 
+import org.activejpa.enhancer.ActiveJpaAgentLoader;
+import org.activejpa.jpa.JPA;
 import org.apache.log4j.BasicConfigurator;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
@@ -10,6 +12,7 @@ import com.pnaditya.jersey.resources.UserResource;
 
 public class App {
 	public static void main(String[] args) throws Exception {
+		// Setting up log4f
 		BasicConfigurator.configure();
 
 		ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
